@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import { History, ChevronDown } from "lucide-react";
+import { History, ChevronDown, MapPin, Globe, Sparkles } from "lucide-react";
 
 export default function App() {
   const [text, setText] = useState("");
@@ -76,21 +76,49 @@ export default function App() {
           </h1>
         </div>
 
+        {/* About This App Section */}
+        <div className="px-6 pt-6 pb-2">
+          <div className="mb-6">
+            <p className="text-gray-700 text-sm font-medium mb-3 flex items-center gap-2">
+              <Sparkles className="w-4 h-4 text-blue-500" />
+              About This App
+            </p>
+            
+            <div className="flex gap-3 mb-3">
+              <div className="bg-blue-50 border border-blue-100 rounded-lg p-3 flex-1">
+                <p className="text-gray-700 text-sm mb-2 flex items-center gap-2">
+                  <MapPin className="w-4 h-4 text-blue-600" />
+                  <span className="font-medium">Trained on Indonesian Temple Reviews</span>
+                </p>
+                <p className="text-gray-600 text-xs ml-6">
+                  Reviews from Candi Borobudur and Prambanan temples
+                </p>
+              </div>
+
+              <div className="bg-blue-50 border border-blue-100 rounded-lg p-3 flex-1">
+                <p className="text-gray-700 text-sm mb-2 flex items-center gap-2">
+                  <Globe className="w-4 h-4 text-blue-600" />
+                  <span className="font-medium">Multi-language Support</span>
+                </p>
+                <p className="text-gray-600 text-xs ml-6">
+                  Analyzes reviews in Indonesian and English
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 p-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 px-6 pt-2 pb-6">
 
           {/* Form Section */}
           <div className="lg:flex lg:flex-col lg:justify-start">
-
-          <p className="text-gray-500 text-sm mb-4">
-            Understand visitor opinions on temple experiences through sentiment analysis
-          </p>
 
           {/* Input */}
           <textarea
             className="w-full border border-gray-200 focus:border-blue-400 focus:ring-2 focus:ring-blue-100 p-4 rounded-xl mb-4 outline-none transition"
             rows="4"
-            placeholder="Write your temple review..."
+            placeholder="Write your temple review... Example: 'The temple is beautiful with amazing architecture!' (English) OR 'Candi ini luar biasa indah!' (Indonesian)"
             value={text}
             onChange={(e) => setText(e.target.value)}
           />
@@ -124,13 +152,6 @@ export default function App() {
 
           {/* History Section */}
           <div className="flex flex-col">
-            {/* Header with icon */}
-            <div className="flex items-center gap-2 mb-3">
-              <History className="w-5 h-5 text-gray-600" />
-              <h2 className="text-lg font-semibold text-gray-700">
-                Review History
-              </h2>
-            </div>
 
             {history.length > 0 ? (
               <div className="space-y-3 flex-1 overflow-y-auto pr-2">

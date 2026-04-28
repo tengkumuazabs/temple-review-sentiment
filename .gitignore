@@ -1,0 +1,17 @@
+# ML model (VERY IMPORTANT)
+backend/sentiment-model/
+*.safetensors
+*.bin
+*.pt
+
+# Python
+__pycache__/
+.venv/
+
+# Node
+node_modules/
+dist/
+build/
+
+# OS
+.DS_Store

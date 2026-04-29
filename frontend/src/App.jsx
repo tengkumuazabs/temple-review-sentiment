@@ -37,7 +37,8 @@ export default function App() {
     setResult(null);
 
     try {
-      const res = await axios.post("http://localhost:8000/predict", {
+      const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:8000";
+      const res = await axios.post(`${apiUrl}/predict`, {
         text,
       });
 

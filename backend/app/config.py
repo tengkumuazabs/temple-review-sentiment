@@ -1,9 +1,9 @@
 from pathlib import Path
-import os
+from dotenv import load_dotenv
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-MODEL_PATH = os.getenv(
-    "MODEL_PATH",
-    str(BASE_DIR / "sentiment-model")
-)
+# load .env file automatically
+load_dotenv(BASE_DIR / ".env")
+
+LOCAL_MODEL_PATH = str(BASE_DIR / "sentiment-model")

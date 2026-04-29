@@ -15,3 +15,7 @@ build/
 
 # OS
 .DS_Store
+
+upload.py
+
+.env

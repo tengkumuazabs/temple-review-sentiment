@@ -44,7 +44,7 @@ export default function App() {
 
       const newItem = {
         text,
-        label: res.data.label,
+        label: res.data.label,  
         confidence: res.data.confidence,
       };
 

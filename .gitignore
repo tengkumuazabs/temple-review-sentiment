@@ -19,3 +19,5 @@ build/
 upload.py
 
 .env
+.env.production
+.env.local

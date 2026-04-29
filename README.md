@@ -6,6 +6,13 @@ A sentiment analysis app that analyzes temple reviews in Indonesian and English.
 
 ---
 
+## 📸 Screenshots
+
+### Main App
+![App Screenshot](screenshots/app-screenshot.png)
+
+---
+
 ## ⚡ Quick Start
 
 ### What It Does

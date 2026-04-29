@@ -9,7 +9,7 @@ A sentiment analysis app that analyzes temple reviews in Indonesian and English.
 ## 📸 Screenshots
 
 ### Main App
-![App Screenshot](screenshots/app-screenshot.png)
+![App Screenshot](screenshots/app-screenshot.jpg)
 
 ---
 
